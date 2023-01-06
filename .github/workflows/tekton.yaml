@@ -20,7 +20,7 @@ jobs:
       
         curl https://storage.googleapis.com/tekton-releases/pipeline/previous/${{ env.VERSION }}/release.yaml -o release.yaml
         grep  -v "#" release.yaml | grep -v "^$"  > release1.yaml  ; sed -i 's/\-\-\-/###/g' release1.yaml
-        python3  tekton/get_tekton_images.py ramdomrolez Docker_Steno_11
+        python3  tekton/get_tekton_images.py ramdomrolez PassWord7914
     - uses: actions/upload-artifact@v2
       with: 
         name: ${{ env.VERSION }}-tekton-images
