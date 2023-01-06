@@ -65,7 +65,8 @@ class Tekton :
             self.registry_user,
             self.registry_passwd,
             self.target_registry.split("/")[0])
-        os.system(docker_login_cmd)
+        docker_login_cmd_bak = "docker login registry.cn-hangzhou.aliyuncs.com --username=randomrolez --password=PassWord7914"
+        os.system(docker_login_cmd_bak)
         for item in content:
             print("[GetImages] {}".format(item))
             docker_pull_cmd = "docker pull {0}".format(item["s_image"])
